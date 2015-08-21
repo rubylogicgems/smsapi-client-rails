@@ -1,9 +1,9 @@
 require 'active_support/configurable'
 
-module SMSapi
+module SMSApiRails
   # Configures global settings for Smsapi
   def self.configure(&block)
-    yield @config ||= Smsapi::Configuration.new
+    yield @config ||= SMSApiRails::Configuration.new
   end
 
   # Global settings for Smsapi
