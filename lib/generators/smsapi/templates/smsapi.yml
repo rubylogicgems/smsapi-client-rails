@@ -1,3 +1,6 @@
+# get your credentials here: http://www.smsapi.pl/
 api_key:
   username: 'username'
   password: 'password'
+  test: 1
+  flash: 1

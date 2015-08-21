@@ -12,7 +12,7 @@ Description:
 DESC
       def copy_config_file
         template 'smsapi.rb', 'config/initializers/smsapi.rb'
-        template 'smsapi.rb', 'config/smsapi.yml'
+        template 'smsapi.yml', 'config/smsapi.yml'
       end
     end
   end
