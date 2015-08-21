@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In order to generate first configuration, run:
+
+```ruby
+rails generate smsapi:config
+```
 
 ## Development
 

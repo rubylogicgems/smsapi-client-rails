@@ -2,8 +2,8 @@ module SMSApiRails
 
   class Client
     def initialize
-      @username = api_key[api_key][username]
-      @password = api_key[api_key][password]
+      @username = SMSApiRails.config.username
+      @password = SMSApiRails.config.password
       @client = SMSApi::Client.new(@username, @password)
     end
 
