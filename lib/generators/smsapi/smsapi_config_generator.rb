@@ -1,7 +1,7 @@
 # This generator drops the smsapi_config.rb and smsapi_config.yml file
 # into the appropriate places in a rails app to configure and initialize the
 # api credentials.
-module SMSapi
+module SMSApiRails
   module Generators
     class ConfigGenerator < Rails::Generators::Base
       source_root File.expand_path(File.join(File.dirname(__FILE__), 'templates'))
