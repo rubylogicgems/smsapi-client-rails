@@ -1,4 +1,6 @@
-api_key = YAML.load_file(Rails.root.join('config', 'smsapi.yml'))
+require 'smsapi'
+
+api_key = YAML.load_file(Rails.root.join('config', 'smsapi.yml'))['api_key']
 
 SMSApiRails.configure do |config|
   config.username = api_key['username']
