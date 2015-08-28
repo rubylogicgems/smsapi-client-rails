@@ -1,12 +1,12 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'smsapi/version'
+require 'smsapi-client-rails/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "smsapi-client-rails"
-  s.version     = SMSApiRails::VERSION
+  s.version     = SmsapiClientRails::VERSION
   s.authors     = ["Alek Niemczyk", "Marek Machula", "Marcin Drozd", "Michal Musialik"]
   s.email       = ["info@rubylogic.pl"]
 

@@ -1,9 +1,9 @@
-module SMSApiRails
+module SmsapiClientRails
 
   class Client
     def initialize
-      @username = SMSApiRails.config.username
-      @password = SMSApiRails.config.password
+      @username = SmsapiClientRails.config.username
+      @password = SmsapiClientRails.config.password
       @client = SMSApi::Client.new(@username, @password)
     end
 
