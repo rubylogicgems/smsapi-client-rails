@@ -5,7 +5,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'smsapi-client-rails'
+gem 'smsapi-client-rails', '~> 0.1'
 ```
 
 And then execute:
@@ -27,8 +27,13 @@ Generate local configuration files:
 Edit edit credentials in config/smsapi.yml. You can get your credentials on [SMSAPI.pl](http://smsapi.pl)
 
 ```ruby
-# Send a single text message
-sms = SMSApi.send_single 500500500, 'Text Message'
+# Basic usage
+client = SmsapiRails.new
+sms = client.send_sms 500500500, 'Text Message'
+bulk = client.send_bulk [500500500, 600600600, 7007007], 'Text Message', test: '1'
+
+# Quick send a single text message
+sms = SmsapiRails.send_sms 500500500, 'Text Message'
 sms.status   # 'OK'
 sms.success? # => true
 sms.points   # => 0.12
@@ -40,8 +45,8 @@ sms.error?        # => true
 sms.error_code    # => 101
 sms.error_message # => 'Bad Credentials'
 
-# Sending messages in bulk
-bulk = SMSApi.send_bulk [500500500, 600600600, 7007007], 'Text Message', test: '1'
+# Quick send a bulk of messages
+bulk = SmsapiRails.send_bulk [500500500, 600600600, 7007007], 'Text Message', test: '1'
 
 # Gives access to an array of sent messages
 bulk.sent
