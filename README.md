@@ -28,7 +28,7 @@ Edit edit credentials in config/smsapi.yml. You can get your credentials on [SMS
 
 ```ruby
 # Basic usage
-client = SmsapiRails.new
+client = SmsapiRails::Client.new username, password
 sms = client.send_sms 500500500, 'Text Message'
 bulk = client.send_bulk [500500500, 600600600, 7007007], 'Text Message', test: '1'
 
