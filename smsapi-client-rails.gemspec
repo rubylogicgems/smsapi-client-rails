@@ -6,7 +6,7 @@ require 'smsapi-client-rails/version'
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "smsapi-client-rails"
-  s.version     = SmsapiClientRails::VERSION
+  s.version     = SmsapiRails::VERSION
   s.authors     = ["Alek Niemczyk", "Marek Machula", "Marcin Drozd", "Michal Musialik"]
   s.email       = ["info@rubylogic.pl"]
 

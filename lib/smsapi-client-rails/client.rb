@@ -1,10 +1,10 @@
-module SmsapiClientRails
+module SmsapiRails
 
   class Client
     def initialize
-      @username = SmsapiClientRails.config.username
-      @password = SmsapiClientRails.config.password
-      @client = SMSApi::Client.new(@username, @password)
+      @username = SMSAPI["username"]
+      @password = SMSAPI["password"]
+      @client = Smsapi::Client.new(@username, @password)
     end
 
     def send_single(to, message)
