@@ -5,16 +5,16 @@ module SmsapiRails
       @client = Smsapi::Client.new(username, password)
     end
 
-    def send_single(to, message)
-      @client.send_single(to, message)
+    def send_sms(to, message, options = {})
+      @client.send_single(to, message, options)
     end
 
-    def schedule_single(to, message, date)
-      @client.schedule_single(to, message, date)
+    def schedule_single(to, message, date, options = {})
+      @client.schedule_single(to, message, date, options)
     end
 
-    def send_bulk(to, message)
-      @client.send_bulk(to, message)
+    def send_bulk(to, message, options = {})
+      @client.send_bulk(to, message, options)
     end
   end
 end
